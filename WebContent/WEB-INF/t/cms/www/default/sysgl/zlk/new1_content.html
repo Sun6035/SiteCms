@@ -1,0 +1,53 @@
+<div id="cen_1000"  style="width:1200px; overflow:hidden; margin:0 auto;">
+    <!-- <div class="tit_nav">实验室资料库</div>
+    <div style="  overflow:hidden; padding:10px 0px; padding-bottom:30px; background-color:#FFF">
+        <div style="height:60px; line-height:60px; text-align:center; font-size:12px; word-spacing:30px;" class='page'></div>
+
+    </div> -->
+   <div class="yh" style="height:40px; line-height:40px; font-size:18px; color:#2684C2; font-weight:bold">实验室资料库</div>
+  
+  
+   <form id="tableForm" method="post">
+<input type="hidden" name="root" value="${root}"/>
+<@p.table value=list;zlk,i,has_next><#rt/>
+	<@p.column title="<input type='checkbox' onclick='Pn.checkbox(\"names\",this.checked)'/>" width="25" align="center">
+		<input type="checkbox" name="names" value="${zlk.name}" onclick="Pn.selectCheckBox('${zlk.name}',this.checked)"/><#t/>
+	</@p.column><#t/>
+	<@p.column title=" " width="25" align="center"><img src="${base}/res/common/img/file/${zlk.ico}.gif"/></@p.column><#t/>
+	<@p.column code="zlk.filename" align="center">
+		<#if zlk.directory>
+		<a href="http://localhost:8080/jeeadmin/jeecms/zlk/v_list.do?root=/${zlk.name}" target="topFrame">${zlk.filename}</a>
+		<#else>
+${zlk.filename} 
+		</#if>
+	</@p.column><#t/>
+	<@p.column code="zlk.size" align="center">${zlk.size} KB</@p.column><#t/>
+	<@p.column code="zlk.lastModified" align="center">${zlk.lastModifiedDate?string('yyyy-MM-dd HH:mm:ss')}</@p.column><#t/>
+	<@p.column code="global.operate" align="center">
+	<#if (root!="/z/school/www")||(username=="admin")>
+	
+		<a href="v_rename.do?root=${root?url}&name=${zlk.name?url} " class="pn-opt"><@s.m "zlk.rename"/></a> | <#rt/>
+		
+	</#if>
+	
+
+		<#if (root!="/z/school/www")||(username=="admin")>
+		<a href="o_delete_single.do?root=${root?url}&name=${zlk.name?url}" onclick="if(!$.confirmToUrl(this.href)) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
+		</#if>
+		<#if zlk.file>
+		
+		<a href="o_delete_single.do?root=${root?url}&name=${zlk.name?url}" class="pn-opt"><@s.m "zlk.download"/></a> | <#rt/>
+		
+		</#if>
+	</@p.column><#t/>
+</@p.table>
+<div style="background:url(${base}/res/common/img/theme/boxTitleBG.jpg) repeat-x; height:20px; overflow:hidden;">
+	
+	<input type="button" value="<@s.m "global.delete"/>" onclick="optDelete();" class="del-button"/ style="float:left; border-right:1px solid #ffffff;">
+	
+</div>
+</form>
+<iframe name="topFrame" width="1200px" height= "650px" name="topFrame" 
+scrolling="No"  noresize="noresize" frameborder="0" id="topFrame">
+</iframe>
+</div>

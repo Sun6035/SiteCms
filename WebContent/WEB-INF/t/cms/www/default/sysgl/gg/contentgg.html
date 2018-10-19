@@ -1,0 +1,20 @@
+<div style="width:1200px; overflow:hidden; margin:0 auto;">
+    
+    <div style=" overflow:hidden; padding:10px; padding-bottom:30px; background-color:#FFF">
+   
+        <div style="overflow:hidden"> 
+            <!--内容区 -->
+            <div class="tit">${content.title}</div>
+            <div style="font-size:12px; height:30px; line-height:30px; color:#999"> 发布时间：${content.releaseDate} </div>
+            <div class="content">${txt!}</div>
+            <div style="height:60px; line-height:60px; text-align:center; font-size:12px; word-spacing:30px;"></div>
+            <div class="tit_nav">更多信息</div>
+            <div class="list_2">
+                <ul>
+                   <li><strong>上一篇：</strong>[@cms_content id=content.id next='1' channelId=channel.id][#if tag_bean??]<a href="${tag_bean.url}">${tag_bean.title}</a>[#else]没有了[/#if][/@cms_content]</li>
+            <li><strong>下一篇：</strong>[@cms_content id=content.id next='0' channelId=channel.id][#if tag_bean??]<a href="${tag_bean.url}">${tag_bean.title}</a>[#else]没有了[/#if][/@cms_content]</li>      
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

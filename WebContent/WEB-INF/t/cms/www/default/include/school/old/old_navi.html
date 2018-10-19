@@ -1,0 +1,45 @@
+    <!-- 导航开始 -->
+    <div class="tc-nav">
+        <div class="tc-wrapper">              
+        <ul class="tc-nav-list">
+        <li>
+        <a href="${site.url!}" target="_self">网站首页</a></li>     
+		
+		[@cms_channel_list parentId=1]
+		[#list tag_list as c]
+	    [#if c_index<8]
+		<li>
+			<a href="${c.url}" target="_self">
+				 ${c.name}	 
+				 [#if c.getListForSelect??]
+				 <ul class="second-nav">
+				 [@cms_channel_list parentId=c.id]
+				 [#list tag_list as d]
+				 <li>
+				 <span>${d.name}</span>
+				 </li>
+			     [/#list]
+				 [/@cms_channel_list]
+				 </ul>
+				 [/#if]
+				</a>
+	    </li>
+		[/#if] 
+		[/#list] 		
+		[/@cms_channel_list]
+		  <li><a href="http://localhost:8080/sysgl.jspx?returnUrl=/sysgl.jspx" target="_self">实验室管理</a></li> 
+	    </ul >
+        </div>
+    </div>
+    <!-- 导航结束 -->
+
+
+    <!-- 轮播图开始 -->
+    <div class="tc-carousel">
+        <ul>
+            <li>
+                <img src="r/cms/www/default/school/images/index/banner.png" alt="">
+            </li>
+        </ul>
+    </div>
+    <!-- 轮播图结束 -->

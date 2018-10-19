@@ -1,0 +1,77 @@
+<div style="width: 100%; height: 293px; background-image: url(/${res}/school/images/syjx_index_c_05.png); background-repeat: no-repeat; background-position: center;">
+	<div style="width: 1200px; margin: 0 auto; height: 280px; padding: 20px 0px">
+		<div class="glxt_login_bg">
+			<!--登录框 -->
+			<div class="glxt_login"></div>
+		
+		 [#if user??]
+		 <div style="padding: 15px;text-align: center; line-height:30px;">
+                     欢迎 ${user.username} <br/>
+          <a href="http://localhost:8080/grzx.jspx?returnUrl=/grzx.jspx">进入个人中心</a><br/>
+          <a href="logout.jspx?returnUrl=/sysgl.jspx">退出</a>
+          </div>
+          
+    [#else]			
+   <form id="jvForm" method="post" action="${base}/login.jspx?returnUrl=${returnUrl}"  >
+	<div class="glxt_login_mem">
+	<input name="username" class="glxt_login_mem_input" type="text" id="username">
+	</div>
+	
+	<div class="glxt_login_key">
+	<input name="password" class="glxt_login_key_input" type="password" id="password">
+	</div>	
+			
+	<div class="glxt_login_wjmm">
+		<div class="glxt_login_wjmm_left">
+	    <a href="${base}/member/forgot_password.jspx">忘记密码</a>?
+		</div>
+				<div class="glxt_login_wjmm_right">
+				<input name="" src="/${res}/school/images/login_bt.jpg" type="image">
+				</div>
+				</div>
+			</form>
+			<div class="glxt_login_yszh">演示账号：test 密码：123456</div>
+			 [/#if]
+		</div>
+	</div>
+</div>
+
+<div style="width:1200px; height:60px; margin:0 auto; overflow:hidden; background-image:url(/${res}/school/images/sysgl_index_c_08.png); background-repeat:no-repeat; background-position:0px 20px; margin-bottom:20px"></div>
+<div style="width:1200px; margin:0 auto; overflow:hidden; ">
+  <table width="100%" border="0" cellspacing="20">
+    <tr>
+      <td align="center"><a href="index.php?m=Lab&amp;a=index&amp;id=123"><img src="/${res}/school/images/sys1.png" width="109" height="109" /></a></td>
+      <td align="center"><a href="index.php?m=Instrument&amp;a=index&amp;id=96"><img src="/${res}/school/images/sys2.png" width="109" height="109" /></a></td>
+      <td align="center"><a href="index.php?m=Material&amp;a=index&amp;id=94"><img src="/${res}/school/images/sys3.png" width="109" height="109" /></a></td>
+    </tr>
+    <tr>
+      <td align="center" class="td_tit"><a href="index.php?m=Lab&amp;a=index&amp;id=123">多功能实验室</a></td>
+      <td align="center" class="td_tit"><a href="m=Instrument&amp;a=index&amp;id=96">仪器管理</a></td>
+      <td align="center" class="td_tit"><a href="m=Material&amp;a=index&amp;id=94">耗材管理</a></td>
+    </tr>
+    <tr class="td_txt">
+      <td height="100" align="left"> 慕课学习模式，每门实验课程包括一二级章节，在每个小节都浏览视频、课件、教案等内容，并且可以参与讨论。</td>
+      <td align="left"> 系统自动生成考卷，随机抽题让学生进行考试，每种题型各15道题目，每个学生只有一次考试机会。考完即给出分数与答案。</td>
+      <td align="left"> 学生可以在线提交实验报告，必须在规定时间内本实验报告，截止前可以重新提交，教师在线评分后学生可以查看成绩。</td>
+    </tr>
+    <tr>
+      <td align="center"><a href="http://localhost:8080/v6f/systk/index.jhtml"><img src="/${res}/school/images/sys5.png" width="109" height="109" /></a></td>
+      <td align="center"><a href="index.php?m=Article&amp;a=index&amp;id=93"><img src="/${res}/school/images/sys6.png" width="109" height="109" /></a></td>
+      <td align="center"><a href="#"><img src="/${res}/school/images/sys7.png" width="109" height="109" /></a></td>
+    </tr>
+    <tr>
+      <td align="center" class="td_tit"><a href="http://localhost:8080/v6f/systk/index.jhtml">实验室图库</a></td> 
+      <td align="center" class="td_tit"><a href="index.php?m=Article&amp;a=index&amp;id=93">实验室资料库</a></td>
+      <td align="center" class="td_tit"><a href="#">数据统计</a></td>
+    </tr>
+    <tr class="td_txt">
+      <td align="left"> 通过密码验证下载技术，用户必须获得发布人提供的验证密码，才能下载该资源，教师学生还能分享下载地址。</td>
+      <td align="left"> 定制设计实习线路，采用标注地图的方式精确定位野外实习地点，学生点击地图详细信息可以了解该实习区域的具体情况。</td>
+      <td align="left"> 学生可以在线提交实验报告，必须在规定时间内本实验报告，截止前可以重新提交，教师在线评分后学生可以查看成绩。</td>
+    </tr>
+  </table>
+</div>
+<script>
+    var menu_id='20';
+    $('#cat_'+menu_id).addClass('on');
+</script>

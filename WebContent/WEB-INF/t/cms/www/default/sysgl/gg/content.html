@@ -1,0 +1,48 @@
+<div style=" overflow:hidden; padding:10px; padding-bottom:30px; background-color:#FFF">
+       
+        <div class="tit_nav">通知公告</div>
+
+        <div style=" overflow:hidden;"> 
+            <!--内容区 -->
+            <div class="list_1">  
+              <ul>
+                [@cms_content_page count='16' orderBy='4' channelId='176' titLen='20' append='...' dateFormat='yyyy-MM-dd' channelOption='1' open='1']  
+                [#list tag_pagination.list as a]
+                <li>
+                            <div class="list_1_img"></div>
+                            <div class="list_1_txt"><a href="${a.url}">[@text_cut s=a.title len=titLen /]</a></div>
+                            <div class="list_1_time">${a.releaseDate}</div>
+                        </li>           
+                [/#list]
+                
+                <div class="clear"></div>
+                </ul>
+                <div class="pagesite">[@cms_pagination sysPage='1'/] </div>
+                [/@cms_content_page]   
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+            </div>
+            <div style="height:60px; line-height:60px; text-align:center; font-size:12px; word-spacing:30px;" class="page"></div>
+        </div>
+
+    </div>

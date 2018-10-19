@@ -1,0 +1,105 @@
+    <!-- 导航开始 -->
+    <div class="tc-nav">
+        <div class="tc-wrapper">              
+        <ul class="tc-nav-list">
+        <li>
+        <a href="${site.url!}" target="_self">网站首页</a></li>     
+		
+		[@cms_channel_list parentId=1]
+		[#list tag_list as c]
+	    [#if c_index<8]
+		<li>
+                    <a href="${c.url}" target="_self">
+					${c.name}
+					 </a>
+					[#if c.child?? && (c.child?size > 0)]
+
+					 <ul class="second-nav">
+					 
+					 [@cms_channel_list parentId=c.id]
+						 [#list tag_list as d]
+						 <li><a href="${d.url}">${d.title}</a></li>
+						 
+						  [/#list]
+					    [/@cms_channel_list]
+					</ul>
+					    
+					[/#if]
+					
+					[#if c_index==0] 
+					    
+					 <ul class="second-nav">
+					 
+					  [@cms_content_list count='10' orderBy='3' titLen='22' channelId=c.id]
+                      [#list tag_list as a]
+                      <li><a href="${a.url}">${a.title}</a></li>
+           
+                      [/#list] 
+                       [/@cms_content_list]
+					</ul>
+					    
+					[/#if]
+					
+					[#if c_index==1]  
+					    
+					 <ul class="second-nav">
+					 
+					  [@cms_content_list count='10' orderBy='3' titLen='22' channelId=c.id]
+                      [#list tag_list as a]
+                      <li><a href="${a.url}">${a.title}</a></li>
+           
+                      [/#list] 
+                       [/@cms_content_list]
+					</ul>
+					    
+					[/#if]
+					 [#if c_index==4]
+					   
+					    
+					 <ul class="second-nav">
+					 
+					  [@cms_content_list count='10' orderBy='3' titLen='22' channelId=c.id]
+                      [#list tag_list as a]
+                      <li><a href="${a.url}">${a.title}</a></li>
+           
+                      [/#list] 
+                       [/@cms_content_list]
+					</ul>
+					    
+					[/#if]
+					[#if c_index==6]
+					   
+					    
+					 <ul class="second-nav">
+					 
+					  [@cms_content_list count='10' orderBy='3' titLen='22' channelId=c.id]
+                      [#list tag_list as a]
+                      <li><a href="${a.url}">${a.title}</a></li>
+           
+                      [/#list] 
+                       [/@cms_content_list]
+					</ul>
+					    
+					[/#if]
+				
+                </li>
+
+		[/#if] 
+		[/#list] 
+		[/@cms_channel_list]
+		  <li><a href="http://localhost:8080/sysgl.jspx?returnUrl=/sysgl.jspx" target="_self">实验室管理</a></li> 
+	    </ul >
+        </div>
+    </div>
+    <!-- 导航结束 -->
+
+
+    <!-- 轮播图开始 -->
+    <div class="tc-carousel">
+        <ul>
+            <li>
+                <img src="r/cms/www/default/school/images/index/banner.png" alt="">
+            </li>
+        </ul>
+    </div>
+    <!-- 轮播图结束 -->

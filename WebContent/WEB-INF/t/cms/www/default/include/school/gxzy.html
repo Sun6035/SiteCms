@@ -1,0 +1,37 @@
+    <!-- 共享资源 -->
+    <div class="tc-share tc-wrapper">
+    	<div class="share-left left">
+    		<h3>共享资源</h3>
+    		<ul>
+    	   [@cms_content_list count='5' orderBy='4' channelId='132' titLen='20' append='...' dateFormat='yyyy-MM-dd' channelOption='1' open='1']  
+           [#list tag_list as a]
+                <li>
+           <span><i></i>
+           <a  href="${a.url}">[@text_cut s=a.title len=titLen /]</a>
+           </span>
+    				<i class="right">${a.releaseDate}</i>      
+                        </li>           
+                [/#list]
+                [/@cms_content_list]   
+    		</ul>
+    	</div>
+    	
+    	
+    	
+	
+    	
+    	<div class="share-right right">
+    		 [@cms_content id='594' ]
+    		<div class="s-r-top">
+    			${tag_bean.title!}
+    		</div>
+    		<div class="s-r-c">
+    			<img class="left" src="${tag_bean.attachmentPaths[0]!}" alt="">
+    			<div class="left">
+    				${tag_bean.txt!}
+    			</div>
+    			
+    		</div>
+    	 [/@cms_content]
+    	</div>
+    </div>

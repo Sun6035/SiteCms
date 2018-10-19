@@ -1,0 +1,50 @@
+
+     <!-- 分类开始 -->
+    <div class="tc-category">
+        <div class="tc-wrapper">
+            <ul>
+            
+       [@cms_channel_list parentId="160"] 
+        [#list tag_list as c]
+        [#if c_index=1 || c_index=2 ||c_index=5 ||c_index=8]
+
+                 <li>
+                    <a href="${c.url!''}" target="_self">
+					
+					
+					<img src="${c.titleImg!''}" alt="">
+                   
+					
+				</a>
+				 <span>${c.name}</span>
+                </li>
+
+
+
+        [/#if]
+        [/#list]
+        [/@cms_channel_list]
+            
+             <li>
+           [@cms_channel id='139']
+            <a href="${tag_bean.url!''}" target="_self">
+           <img src="${tag_bean.titleImg!''}" alt=""/>
+           </a>
+           <span>${tag_bean.name}</span>
+           [/@cms_channel]
+            </li>
+                
+           <li>
+           [@cms_channel id='131']
+           <a href="${tag_bean.url!''}" target="_self">
+           <img src="${tag_bean.titleImg!''}" alt=""/>
+           </a>
+           <span>${tag_bean.name}</span>
+           [/@cms_channel]
+            
+               </li>
+                
+            </ul>
+        </div>
+    </div>
+    <!-- 分类结束 -->

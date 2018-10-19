@@ -1,0 +1,83 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th{ margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline;}
+body { margin:0px; color:#333; font-size:12px}
+div { padding:0px; margin:0px; }
+a:link{ color:#333333; text-decoration:none}
+a:visited{ color:#333333; text-decoration:none}
+a:hover{ color:#F60; text-decoration:none}
+a:active{  color:#F60;text-decoration:none}
+br { text-indent:26px; }
+ul { margin:0px; padding:0px }
+li { margin:0px; padding:0px; list-style-type:none; }
+form { margin:0px; display:inline; }
+p { padding:0px; margin:0px; line-height:22px; font-size:12px;  }
+input{ font-family: STHeiti,"Microsoft YaHei",Simsun;}
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+label { cursor:pointer; }
+image { border:0; }
+.yh { font-family: "Microsoft Yahei", Arial }
+.ico_1{ float:left; width:300px; margin:0 10px;}
+.ico_img{height:200px; text-align:center}
+.ico_txt{float:left; width:200px; margin:0 62px;}
+.ico_txt_tit{height:40px; line-height:40px; text-align:center; font-weight:bold; font-size:18px;}
+.ico_2{ float:left; width:150px; margin:0 25px; margin-bottom:30px;}
+.ico_2_img{height:150px; text-align:center}
+.ico_2_txt{width:150px; font-size:12px; text-align:center; height:40px; line-height:40px;}
+.ico_txt_tit{height:40px; line-height:40px; text-align:center; font-weight:bold; font-size:18px;}
+.a:link{ color:#333; text-decoration:none}
+.a:visited{ color:#333; text-decoration:none}
+.a:hover{ color:#F30; text-decoration:none}
+.a:active{ color:#F30; text-decoration:none}
+.w a:link{ color:#FFF; text-decoration:none}
+.w a:visited{ color:#FFF; text-decoration:none}
+.w a:hover{ color:#FF0; text-decoration:none}
+.w a:active{ color:#FF0; text-decoration:none}
+.b a:link{ color:#21ABF6; text-decoration:none}
+.b a:visited{ color:#21ABF6; text-decoration:none}
+.b a:hover{ color:#F30; text-decoration:none}
+.b a:active{ color:#F30; text-decoration:none}
+.y a:link{ color:#FF0; text-decoration:none }
+.y a:visited{ color:#FF0; text-decoration:none}
+.y a:hover{ color:#F30; text-decoration:none}
+.y a:active{ color:#F30; text-decoration:none}
+
+/*=================================================实验室管理=====================================================*/
+#sysgl_header{width:100%; height:100px; background-color:#236493}
+#sysgl_header_1200{width:1200px; margin:0 auto; height:100px; background-image:url(../images/sysgl_index_c_02.png); background-repeat:no-repeat;}
+#sysgl_header_1200_right{float:right; width:720px;}
+#sysgl_header_1200_left{height:30px; line-height:30px; padding-top:16px; padding-right:18px; text-align:right; word-spacing:30px;}
+#sysgl_footer{width:100%; height:60px; margin-top:30px; background-color:#A7EAEF}
+#sysgl_footer_1200{width:1200px; height:40px; line-height:22px; padding-top:20px; margin:0 auto; overflow:hidden; background-color:#046669; text-align:center; color:#FFF}
+/*实验室管理导航NAV*/
+#sysgl_nav{height:48px; line-height:48px;}
+#sysgl_nav li{ list-style-type:none; float:left; font-size:16px; text-align:center; font-weight:bold; font-family: STHeiti,"Microsoft YaHei",Simsun;}
+#sysgl_nav li a:link{ display:block; padding:5px 10px; line-height:40px; color:#FFF}
+#sysgl_nav li a:visited{display:block; padding:5px 10px; height:40px; line-height:40px; color:#FFF;}
+#sysgl_nav li a:hover{display:block; padding:5px 10px; height:40px; line-height:40px; color:#FFF; background-color:#F90}
+#sysgl_nav li a:hover{display:block; padding:5px 10px; height:40px; line-height:40px; color:#FFF; background-color:#F90}
+.td_tit{ font-size:20px; height:36px; line-height:36px; font-family: STHeiti,"Microsoft YaHei",Simsun;}
+.td_txt{ font-size:14px; line-height:26px; text-indent:26px; margin-bottom:20px;}
+#sysgl_footer{width:100%; height:60px; margin-top:30px; background-color:#CFF1FC}
+#sysgl_footer_1200{width:1200px; height:40px; line-height:22px; padding-top:20px; margin:0 auto; overflow:hidden; background-color:#236493; text-align:center; color:#FFF}
+
+/*自定义*/
+.tit_nav{
+    font-size: 22px;border-bottom: 1px solid #ddd;line-height: 42px;
+}
+.table-list td{border-bottom: 1px solid #ddd;}
+.pages a{border: 1px solid #4C9ED9;padding: 3px 5px ;margin:0 5px;background: #4C9ED9;color:#fff;}
+
+/*登陆框*/
+.glxt_login_bg{float:right; width:260px; height:250px; background-color:#FFF; border:1px solid #CCC}
+.glxt_login{height:34px; background-image: url(../images/login_form_syjx_03.png); background-repeat:no-repeat; background-position:20px 14px;}
+.glxt_login_mem{padding:16px 20px 10px 60px; height:30px; background-image:url(../images/login_form_syjx_03-07.png); background-repeat:no-repeat; background-position:center}
+.glxt_login_mem_input{width:160px; height:26px; border:0px solid #FFF; background-color:transparent ;}
+.glxt_login_key{padding:16px 20px 10px 60px; height:30px; background-image:url(../images/login_form_syjx_07.png); background-repeat:no-repeat; background-position:center}
+.glxt_login_key_input{width:160px; height:26px; border:0px solid #FFF; background-color:transparent ;}
+.glxt_login_wjmm{height:40px; line-height:40px; text-align:left; padding:10px 20px 0px 20px;}
+.glxt_login_wjmm_left{float:left; width:60px;}
+.glxt_login_wjmm_right{float:right; width:142px;}
+.glxt_login_yszh{height:30px; line-height:30px; text-align:center; font-size:12px; padding-top:10px;}

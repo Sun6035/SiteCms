@@ -1,0 +1,40 @@
+<div style="width:1200px; overflow:hidden; margin:0px auto; margin-bottom:10px;"><img src="../${res}/sysgl/images/ad_1.jpg" width="1200" height="230"></div>
+<div id="index_cen3"> 
+  <!--CEN2左边开始 -->
+  <div id="index_cen3_left">
+    <div id="navi"></div>
+    <div class="lbnav">
+      <ul>
+
+ 
+ 
+  [@cms_content_list count='10' orderBy='3' titLen='22' channelId=channel.id]
+                      [#list tag_list as a]
+                      <li><a href="${a.url}" title="${a.title}" >${a.title}</a></li>
+           
+                      [/#list] 
+                       [/@cms_content_list]
+ 
+ 
+ 
+       </ul>
+    </div>
+    <!--左侧广告 --> 
+    <div style=" padding:10px;"><a href="http://xnfz.gxtc.edu.cn/online/index.php?m=Page&amp;a=index&amp;id=48" target="_blank"><img src="../${res}/sysgl/images/left_ad1.png" width="180" height="80"></a></div>
+<div style=" padding:10px;"><a href="http://localhost:8080/sysgl.jspx?returnUrl=/sysgl.jspx" target="_blank"><img src="../${res}/sysgl/images/left_ad2.png" width="180" height="80"></a></div>
+ </div>
+  <!--CEN2右边开始 -->
+  <div id="index_cen3_right"> 
+    <!--我的位置 -->
+    <div class="nr_wdwz">我的位置：<a href="/">首页</a>&nbsp;&gt;&nbsp;
+    [#list channel.nodeList as n]
+    [#if n_index>1] >
+    <a target="_blank" href="${n.url}">${n.name}</a>[#if n_has_next] > [/#if]
+    [/#if]
+    [/#list] >正文</div>
+    <div class="nr_tit yh">${content.title}</div>
+    <div class="nr_content"> ${txt!}
+
+</div>
+  </div>
+</div>

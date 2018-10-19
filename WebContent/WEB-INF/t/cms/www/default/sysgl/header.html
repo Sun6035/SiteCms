@@ -1,0 +1,33 @@
+<div id="sysgl_header">
+	<div id="sysgl_header_1200">
+		<div id="sysgl_header_1200_right">
+			<div id="sysgl_header_1200_left" class="w">
+				<a href="../">返回中心首页</a> 
+				<a href="index.php?m=Page&a=index&id=48">实验教学信息平台</a>
+				
+				[#if user??] <a href="#">欢迎您:&nbsp;&nbsp;${user.username}&nbsp;(进入个人中心)</a> <a
+					href="logout.jspx?returnUrl=/sysgl.jspx">退出登录</a> [#else] <a
+					href="${base}/login.jspx?returnUrl=${base}/sysgl.jspx">请登录</a>
+				[/#if]
+			</div>
+
+           <div id="sysgl_nav">
+				<ul>
+		
+	    [@cms_channel_list parentId=160]
+		[#list tag_list as c]
+	    [#if c_index<8]
+		<li>
+			<a href="${c.url}" target="_self">
+				 <span>${c.name}</span>
+				</a>
+	    </li>
+		[/#if] 
+		[/#list] 
+		[/@cms_channel_list]
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+

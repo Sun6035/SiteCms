@@ -1,0 +1,49 @@
+<!-- 底部开始 -->
+    <div class="tc-footer">
+    <div style="height:10px; background:#043cbd;">
+        <div class="tc-wrapper">
+            <!-- 链接 -->
+            
+        <ul class="footer-link">
+        <li>
+        <a href="${site.url!}" target="_self">网站首页</a></li>     
+		
+		[@cms_channel_list parentId=1]
+		[#list tag_list as c]
+	    [#if c_index<8]
+		<li>
+			<a href="${c.url}" target="_self">
+				 ${c.name}	 
+				</a>
+	    </li>
+		[/#if] 
+		[/#list] 		
+		[/@cms_channel_list]
+		  <li><a href="http://localhost:8080/sysgl.jspx?returnUrl=/sysgl.jspx" target="_self">实验室管理</a></li> 
+	    </ul >
+        </div>
+    </div>
+            
+            <br/>   <br/>  <br/>     
+            <!-- information -->
+            <div class="footer-info">
+                <p class="copyright">
+                    版权所有@地理过程与资源环境虚拟仿真实验教学中心 建议使用1366*768以上分辨率浏览器
+                </p>
+                <p>
+                    网站技术提供- Design By KBXS团队
+                </p>
+                <p>
+                    办公电话:0771-3012327 传真:0771-3105009 站长邮箱:hbq1230@gxtc.edu.com
+                </p>
+                <div class="footer-qrcode">
+                    <img src="/${res}/school/images/index/wechat.jpg" alt="">
+                    <span>
+                        <i>扫描关注</i>更多校园资讯
+                    </span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部结束 -->

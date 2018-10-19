@@ -1,0 +1,42 @@
+    <!-- 头部开始 -->
+    <div class="tc-header">
+        <div class="tc-wrapper">
+            <!-- 头部左边开始 -->
+            <div class="tc-h-l left">
+                <a href="javascript:void(0);">实验教学平台+实验室管理</a>
+                <i>|</i>
+                <span>
+					演示账号: test &nbsp;&nbsp;
+					密码: 123456
+				</span>
+            </div>
+            <!-- 头部左边结束 -->
+         <!-- 头部右边开始 -->
+            <div class="tc-h-r right">
+               	[#if user??]欢迎您: ${user.username} &nbsp; ${user.group.name} &nbsp; 
+               	<a href="logout.jspx?returnUrl=/">退出登录</a>
+               	[#else]
+	                       游客您好，您还没有登录哦！ 
+	            <a href="${base}/login.jspx?returnUrl=${base}/">登录</a>
+	            [/#if]       
+                <div class="tc-h-s">
+                    <input type="text" placeholder="请输入搜索内容...">
+                    <i></i>
+                </div>
+            </div>
+  <!-- 头部右边结束 -->
+        </div>
+    </div>
+    <!-- 头部结束 -->
+
+    <!-- logo开始 -->
+    <div class="tc-logo">
+        <div class="tc-wrapper">
+            <i class="logo-img"></i>
+            <div class="logo-title">
+                <span class="title-cn">软件学院虚拟仿真实验教学管理平台</span>
+                <span class="title-en">Virtual Simulation Experiment Teaching Management Platform of Software College</span>
+            </div>
+        </div>
+    </div>
+    <!-- logo结束 -->

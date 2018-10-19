@@ -1,0 +1,523 @@
+/*
+ 头部开始
+*/
+
+.tc-header {
+	height: 55px;
+	line-height: 55px;
+	background: #043CBD;
+	color: white;
+}
+
+.tc-header .tc-h-l i {
+	margin: 0 4px;
+}
+
+.tc-header .tc-h-r .tc-h-s {
+	display: inline-block;
+	height: 34px;
+	width: 282px;
+	vertical-align: -4px;
+	font-size: 0;
+	background: #fff;
+	position: relative;
+	margin-left: 10px;
+}
+
+.tc-header .tc-h-r .tc-h-s input {
+	height: 34px;
+	width: 100%;
+	border: none;
+	vertical-align: top;
+	padding-left: 15px;
+	outline: none;
+}
+
+.tc-header .tc-h-r .tc-h-s i {
+	width: 34px;
+	height: 27px;
+	display: inline-block;
+	background: url("../../images/index/search.png") no-repeat 5px 0;
+	background-size: 80%;
+	position: absolute;
+	right: 5px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding-left: 10px;
+	border-left: 2px solid #304536;
+}
+
+/*
+  logo开始
+*/
+.tc-logo {
+	height: 187px;
+	background: #1955DE;
+}
+
+
+.tc-logo .logo-img {
+	background: url(../../images/index/logo.png) no-repeat;
+    width: 383px;
+    height: 97px;
+    display: inline-block;
+    vertical-align: -19px;
+    margin-top: 38px;
+}
+
+.tc-logo .logo-title {
+	display: inline-block;
+	color: #fff;
+	padding-left: 20px;
+	margin-left: 10px;
+	border-left: 2px solid #fff;
+}
+
+.tc-logo .logo-title span{
+	display: block;
+}
+
+.tc-logo .logo-title .title-cn {
+	font-size: 36px;
+}
+
+.tc-logo .logo-title .title-en {
+
+}
+
+/*导航开始*/
+.tc-nav {
+	height: 50px;
+	line-height: 50px;
+}
+
+.tc-nav .tc-nav-list {
+	font-size: 0;
+	height: 50px;
+}
+
+.tc-nav .tc-nav-list>li>a {
+	color: black;
+	font-size: 15px;
+	position: relative;
+}
+
+.tc-nav .tc-nav-list>li:hover {
+	background-color: #043CBD
+}
+
+.tc-nav .tc-nav-list>li:hover>a {
+	color: #fff;
+}
+
+.tc-nav .tc-nav-list>li {
+	width: 95px;
+	text-align: center;
+	display: inline-block;
+	height: 50px;
+}
+
+.tc-nav .tc-nav-list>li>a .second-nav {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	top: 35px;
+}
+
+.tc-nav .tc-nav-list>li>a .second-nav li{
+	width: 95px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    background: #043CBD;
+    text-align: center;
+}
+
+.tc-nav .tc-nav-list>li:hover .second-nav {
+	display: block;
+}
+
+.tc-nav .tc-nav-list>li .second-nav li:hover {
+	background: #1955DE
+}
+
+.tc-nav .tc-nav-list>li .second-nav li+li {
+	border-top: 1px dashed #fff;
+}
+
+/*轮播图开始*/
+.tc-carousel {
+
+}
+
+.tc-carousel img {
+	width: 100%;
+	height: 500px;
+}
+
+/*分类*/
+.tc-category {
+	margin-top: 40px;
+}
+
+.tc-category ul {
+	font-size: 0px;
+}
+
+.tc-category ul li {
+	display: inline-block;
+	text-align: center;
+	width: calc(100%/6)
+}
+
+.tc-category ul li:first-child {
+	text-align: left;
+}
+
+.tc-category ul li:first-child span {
+	padding-left: 24px;
+}
+
+.tc-category ul li:last-child {
+	text-align: right;
+}
+
+.tc-category ul li:last-child span {
+	padding-right: 24px;
+}
+
+.tc-category ul li img {
+	width: 134px;
+	height: 134px;
+}
+
+.tc-category ul li span {
+	display: block;
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+/*新闻公告开始*/
+.tc-news {
+	margin-top: 40px;
+	font-size: 0;
+}
+
+.tc-news .vir-title ul{
+	list-style-type: none !important;
+}
+
+.tc-news .vir-title ul li {
+	border-bottom: 1px dashed #999;
+}
+
+.tc-news .vir-title ul>li>span:last-child {
+	background: url("../../images/index/icon.png") no-repeat;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+}
+
+.tc-news .news-item {
+	width: calc(100%/3);
+	display: inline-block;
+	padding-right: 20px;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+.tc-news .news-item .item-top {
+	border-bottom: 1px solid #CECECE;
+}
+
+.tc-news .news-item .item-top span{
+	display: inline-block;
+	height: 26px;
+	padding-right: 22px;
+	padding-left: 34px;
+	padding-bottom: 33px;
+	color: #3265A6;
+	font-size: 20px;
+	border-bottom: 2px solid #3265A6;
+}
+
+.tc-news .news-item .item-top span.new-notice {
+	background: url('../../images/index/公告.png') no-repeat;
+}
+
+.tc-news .news-item .item-top span.center-news {
+	background: url('../../images/index/中心资讯.png') no-repeat;
+}
+
+.tc-news .news-item .item-top span.vir-source {
+	background: url('../../images/index/虚拟仿真资源.png') no-repeat;
+}
+
+.tc-news .news-item .item-top span i {
+	color: black;
+}
+
+
+
+.tc-news .news-item .item-top>i {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../../images/index/more.png) no-repeat right bottom;
+	font-size: 14px;
+	padding-right: 60px;
+	margin-top: 10px;
+}
+
+.tc-news .news-item .item-img {
+	margin-top: 5px;
+}
+
+.tc-news .news-item .item-title ul {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+.tc-news .news-item .item-title ul li {
+	margin-top: 8px;
+	font-size: 16px;
+}
+
+.tc-news .news-item .item-title ul li span.text {
+	width: 160px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+/*简介开始*/
+.tc-desc {
+	margin-top: 30px;
+}
+
+.tc-desc::after {
+	content: '';
+	display: block;
+	zoom: 1;
+	height: 0;
+	clear: both;
+}
+
+.tc-desc .desc-left {
+	width: 380px;
+}
+
+.tc-desc .desc-left img {
+	display: block;
+}
+
+.tc-desc .desc-left img+img {
+	margin-top: 10px;
+}
+
+.tc-desc .desc-right {
+	width: 800px;
+	height: 459px;
+	border: 3px solid #0042DA;
+	border-radius: 18px;
+}
+
+.tc-desc .desc-right h3 {
+	font-size: 30px;
+	color: #333;
+	text-align: center;
+	padding: 16px 0 13px 0;
+	width: 95%;
+	margin: 0 auto;
+	border-bottom: 2px solid #0042DA
+}
+
+.tc-desc .desc-right .des-content {
+	width: 95%;
+	margin: 10px auto;
+}
+
+.tc-desc .desc-right .des-content .text-left {
+	width: 390px;
+	color: #333;
+	line-height: 34px;
+	text-align: center;
+}
+
+.tc-desc .desc-right .des-content .text-left p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 9;
+	overflow: hidden;
+	text-indent: 2em;
+	/*height: 200px;*/
+}
+
+.tc-desc .desc-right .des-content .text-left button {
+	display: inline-block;
+	width: 117px;
+	height: 33px;
+	background: #F25D65;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	margin-top: 20px;
+}
+
+.tc-desc .desc-right .des-content img {
+	width: 341px;
+}
+
+/*共享资源开始*/
+.tc-share {
+	margin-top: 30px;
+}
+
+.tc-share::after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	zoom: 1;
+}
+
+.tc-share .share-left {
+	width: 380px;
+	height: 405px;
+	background: #1955DE;
+}
+
+.tc-share .share-left h3 {
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	width: 80%;
+	margin: auto;
+	padding: 20px 0px 10px 0;
+	border-bottom: 3px solid #fff;
+}
+
+.tc-share .share-left ul {
+	/*list-style: circle;*/
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.tc-share .share-left ul li {
+	color: #fff;
+	margin-top: 18px;
+}
+
+.tc-share .share-left ul li>span {
+	width: 150px;
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.tc-share .share-left ul li>span>i {
+	display: inline-block;
+	width: 22px;
+	height: 17px;
+	margin-right: 10px;
+	vertical-align: middle;
+	background: url(../../images/index/bookicon.png);
+}
+
+.tc-share .share-right {
+	width: 800px;
+	border: 1px solid #1955DE;
+	height: 405px;
+}
+
+.tc-share .share-right .s-r-top {
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	background: #1955DE;
+	padding: 10px 0;
+}
+
+.tc-share .share-right .s-r-c {
+	padding: 0px 25px;
+	margin-top: 25px;
+}
+
+.tc-share .share-right .s-r-c>div {
+	width: 455px;
+	margin-left: 30px;
+}
+
+.tc-share .share-right .s-r-c>div p {
+	line-height: 40px;
+}
+
+/*底部开始*/
+.tc-footer {
+	margin-top: 20px;
+	height: 260px;
+	background: #1955DE
+}
+
+.tc-footer .footer-link {
+	font-size: 0;
+	width: 100%;
+	text-align: center;
+	padding-top: 40px;
+}
+
+.tc-footer .footer-link>li {
+	display: inline-block;
+}
+
+.tc-footer .footer-link>li a {
+	font-size: 18px;
+	padding: 0px 10px;
+}
+
+.tc-footer .footer-link>li+li{
+	height: 16px;
+    line-height: 14px;
+    border-left: 2px solid #fff;
+}
+
+.tc-footer .footer-info {
+	margin-top: 60px;
+	position: relative;
+}
+
+.tc-footer .footer-info p {
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.tc-footer .footer-info .footer-qrcode {
+	position: absolute;
+    right: 127px;
+    top: -34px;
+}
+
+.tc-footer .footer-info .footer-qrcode img {
+	width: 105px;
+	height: 105px;
+}
+
+.tc-footer .footer-info .footer-qrcode span {
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+}
+
+.tc-footer .footer-info .footer-qrcode span i {
+	display: block;
+	text-align: center;
+}

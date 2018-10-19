@@ -1,0 +1,43 @@
+[#--
+鍥炬枃鍒楄〃鎴栨爣棰樺垪琛ㄥ悜涓婃粴鍔�
+
+rollDisplayHeight: 鏄剧ず鍖哄煙楂樺害锛涖�愭寜鍍忕礌px璁＄畻銆戜笉鑳戒负绌�
+rollLineHeight: 婊氬姩鍖鸿楂橈紱銆愭寜鍍忕礌px璁＄畻銆戜笉鑳戒负绌�
+rollCols: 婊氬姩鍒楁暟锛涖�愪竴琛屼腑鍖呭惈鍑犲垪銆戜笉鑳戒负绌�
+rollSpeed: 婊氬姩閫熷害锛涖�愭粴鍔ㄩ�熷害锛屽�艰秺灏忚秺蹇紝鏈�灏忎负1銆戜笉鑳戒负绌�
+rollSleepTime: 婊氬姩鍋滈】鏃堕棿锛涖�愬�艰秺澶у仠椤胯秺涔呫�戜笉鑳戒负绌�
+rollRows: 婊氬姩琛屾暟锛涖�愪竴涓粴鍔ㄥ懆鏈熸粴鍔ㄧ殑琛屾暟銆戜笉鑳戒负绌�
+rollSpan: 婊氬姩璺ㄥ害锛涖�愪竴娆℃粴鍔ㄧ殑鍍忕礌锛岃法搴﹁秺澶э紝婊氬姩灏辫秺蹇紝浣嗚秺涓嶆祦鐣呫�戜笉鑳戒负绌�
+isSleep: 鏄惁鍋滈】锛涖��0锛氬仠椤匡紱1锛氬仠椤裤�戜笉鑳戒负绌�
+--]
+[#assign picFloat='0'/]
+[#assign RLID][@uuid/][/#assign]
+<div id="roll-${RLID}"[#if cssClass??] class="${cssClass}"[/#if] style="overflow:hidden;height:${rollDisplayHeight}px;${cssStyle!}" onmouseover="clearInterval(proll${RLID}.pevent)" onmouseout="proll${RLID}.pevent=setInterval(function(){proll${RLID}.roll.call(proll${RLID})},proll${RLID}.speed)">
+	<div id="roll-orig-${RLID}">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		[#assign tableCellCount = tag_list?size]
+		[#if tableCellCount< rollCols]
+			[#assign tableCellCount = rollCols/]
+		[#elseif tableCellCount%rollCols != 0]
+			[#assign tableCellCount = tableCellCount+(rollCols-tableCellCount%rollCols)/]
+		[/#if]
+		[#list 0..tableCellCount-1 as i]
+		[#if i%rollCols==0] 
+		<tr> 
+		[/#if] 
+		<td height="${rollLineHeight}"[#if i==0] id="roll-line-${RLID}"[/#if] [#if i < rollCols ] width="${100/rollCols}%"[/#if]">[#rt/]
+			[#if i gte tag_list?size]
+			&nbsp;[#t/]
+			[#else]
+				[#assign ctt=tag_list[i]/]
+				[#include style_core/][#t/]
+			[/#if]
+		</td>[#if i%rollCols==rollCols-1]</tr>[/#if][#lt/]
+		[/#list]
+		</table>
+	</div>
+	<div id="roll-copy-${RLID}"></div>
+</div>
+<script type="text/javascript">
+var proll${RLID}=new Cms.UpRoller("${RLID}",${rollSpeed},[#if isSleep=="1"]true[#else]false[/#if],${rollSleepTime},${rollRows},${rollSpan},${rollLineHeight});
+</script>

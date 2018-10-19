@@ -1,0 +1,34 @@
+<script>
+//delay寤惰繜鏃堕棿锛堟绉掞級
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "${base}/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:100,
+		 autoFocus: true,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 $("#searchForm").submit();
+		 },
+		 success: function( data ) {
+			    response( $.map( data.items, function( item ) {
+			        return {
+			         label: '<B>' + item.id + '</B><br>' + item.label,
+			         value: item.id
+			        }
+			       }));
+		}
+	});
+});
+function qkeypress(){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+}
+</script>
+<div class="pageTitle"></div>
+<div class="clear"></div>

@@ -1,0 +1,58 @@
+<div style="width:1200px; overflow:hidden; margin:0px auto; margin-bottom:10px;"><img src="../${res}/sysgl/images/ad_1.jpg" width="1200" height="230"></div>
+<div id="index_cen3"> 
+  <!--CEN2左边开始 -->
+  <div id="index_cen3_left">
+    <div id="navi"></div>
+    <div class="lbnav">
+      <ul>
+
+ 
+ 
+
+ 
+        [@cms_channel_list parentId=channel.parent.id]
+        
+        [#list tag_list as c]
+       <li><a href="${c.url}" title="${c.title}" >${c.title}</a></li>        
+        [/#list]
+        [/@cms_channel_list]
+     
+ 
+       </ul>
+    </div>
+    <!--左侧广告 --> 
+    <div style=" padding:10px;"><a href="http://xnfz.gxtc.edu.cn/online/index.php?m=Page&amp;a=index&amp;id=48" target="_blank"><img src="../${res}/sysgl/images/left_ad1.png" width="180" height="80"></a></div>
+<div style=" padding:10px;"><a href="http://localhost:8080/sysgl.jspx?returnUrl=/sysgl.jspx" target="_blank"><img src="../${res}/sysgl/images/left_ad2.png" width="180" height="80"></a></div>
+ </div>
+  <!--CEN2右边开始 -->
+  <div id="index_cen3_right"> 
+    <!--我的位置 -->
+    <div class="nr_wdwz">我的位置：<a  style="color:#212121;" href="/">首页</a>
+    [#list channel.nodeList as n]
+    [#if n_index>0] >
+    <a  target="_blank"  style="color:#212121;"  href="${n.url}">${n.name}</a>[#if n_has_next]  [/#if]
+    [/#if]
+    [/#list]</div>
+    <div class="nr_lb_tit yh">${channel.title}</div>
+    <div class="nr_content"> 
+     <div class="list_2_news"> 
+               <ul>
+                [@cms_content_page count='16' orderBy='4' channelId=channel.id  titLen='20' append='...' dateFormat='yyyy-MM-dd' channelOption='1' open='1']  
+                [#list tag_pagination.list as a]
+                <li>
+                            <div class="list_2_news_img"></div>
+                            <div class="list_2_news_txt"><a  style="color:#212121;"  href="${a.url}">[@text_cut s=a.title len=titLen /]</a></div>
+                            <div class="list_2_news_time">${a.releaseDate}</div>
+                        </li>           
+                [/#list]
+                
+                <div class="clear"></div>
+                </ul>
+                <div class="pagesite"  style="color:#212121;">[@cms_pagination sysPage='1'/] </div>
+                [/@cms_content_page]   
+                 </div>
+  </div>
+
+  
+  </div>
+</div>

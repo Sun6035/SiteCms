@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+.mychild{height:25px;}
+</style>
+
+
+</head>
+
+<div id="menu" class="box relative" style="width:1550px;height:280px;;" id="sad">
+<ul id="topmenu" style="width: 1500px;font-size:15px;">
+[@cms_channel_list]
+<li style="width:8.5%;height:270px;" class="mychild"><a  href="${site.url!}" target="_self" [#if !channel??]class="selected " [/#if]><span style="color:white;">网站首页</span></a></li>  
+[#list tag_list as c] [#if c_index<9] [@cms_channel_list parentId=c.id]  
+[#if tag_list?size>0]  
+<li style="width:8.5%;height:270px;" class="mychild">
+[#else]  
+<li style="width:8.5%;height:270px;" class="mychild">[/#if][/@cms_channel_list]<a href="${c.url}" target="_self" ><span style="color:white;">${c.name}</span></a>  
+[@cms_channel_list parentId=c.id][#if tag_list?size>0]  
+<!--子菜单  -->
+<ul style="display:block; width:120px;height:250px;;;pssition:relative;z-index:99;">  
+[@cms_channel_list parentId=c.id] [#list tag_list as c1] [@cms_channel_list parentId=c1.id][#if tag_list?size>0]  
+<li>  
+[#else]  
+<li style="width:100%;height:25px;">[/#if][/@cms_channel_list] <a href="${c1.url}" style="color:white;">${c1.name}</a> [@cms_channel_list parentId=c1.id][#if tag_list?size>0]  
+
+<ul>
+[@cms_channel_list parentId=c1.id] [#list tag_list as c2]  
+<li><a href="${c2.url}" style="color:white;">${c2.name}</a></li>  
+[/#list]  
+[/@cms_channel_list]  
+</ul>  
+[/#if][/@cms_channel_list] </li> [/#list] [/@cms_channel_list]  
+</ul>  
+[/#if][/@cms_channel_list] </li> [/#if] [/#list] [/@cms_channel_list]  
+</ul> 
+</div> 
+
+<div class="clear"></div>
+
+</html>
+
+<script type="text/javascript">
+$(".mychild").hover(function(){
+
+});		
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

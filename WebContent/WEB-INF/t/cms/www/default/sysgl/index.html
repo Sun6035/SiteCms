@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>实验室管理系统-虚拟仿真实验管理系统</title>
+<script src="/${res}/school/js/jquery.min.js"></script>
+<script src="/${res}/school/js/yourphp.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="/${res}/school/css/style.css" />
+<link rel="stylesheet" type="text/css"
+	href="/${res}/school/css/sysgl_style.css" />
+	
+<script type="text/javascript">
+$(function() {
+	Cms.siteFlow("${base}", location.href, document.referrer);
+	$.cookie("_site_id_cookie","${site.id!}",{path: '${base}' });
+});
+</script>
+</head>
+<body style="background-color:white;">
+
+[#include "header.html"/]
+[#include "main.html"/]
+[#include "footer.html"/]
+</body>
+</html>

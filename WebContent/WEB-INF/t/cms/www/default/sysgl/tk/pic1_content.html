@@ -1,0 +1,26 @@
+<div id="cen_1000"  style="width:1200px; overflow:hidden; margin:0 auto;">
+    <div class="tit_nav">实验室图库</div>
+    <div style="  overflow:hidden; padding:10px 0px; padding-bottom:30px; background-color:#FFF">
+
+
+        <div class="list_2_pic">
+            <div class="picli">
+         <ul>                
+        [@cms_channel_list parentId="165"]
+        [#list tag_list as c]
+        [#if c_index<10]
+            <li>
+               <div class="piclibk"> <a href="${c.url!''}"><img src="${c.titleImg!''}" width="180" height="130" border="0"></a></div>
+               <div class="picliwz">
+               <a href="${c.url!''}">${c.name}</a>
+               </div>
+              </li>
+        [/#if]
+        [/#list]
+        [/@cms_channel_list]
+            </ul>
+            </div>
+        </div>
+        <div style="height:60px; line-height:60px; text-align:center; font-size:12px; word-spacing:30px;" class='page'></div>
+    </div>
+</div>
